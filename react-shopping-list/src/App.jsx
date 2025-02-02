@@ -1,7 +1,11 @@
+import { Header } from "./components/Header/Header"
+import { ShoppingList } from "./components/ShoppingList/ShoppingList"
+
 function App() {
   return (
     <div>
-      This is my shopping list!
+      <Header />
+      <ShoppingList />
     </div>
   )
 }
