@@ -4,7 +4,10 @@ import { ShoppingList } from "./components/ShoppingList/ShoppingList"
 function App() {
   return (
     <div>
-      <Header />
+      <Header>
+        <em>Shoppping List App</em>
+      </Header>
+
       <ShoppingList />
     </div>
   )

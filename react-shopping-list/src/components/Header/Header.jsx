@@ -1,9 +1,9 @@
 import './Header.scss'
 
-export function Header() {
+export function Header({ children }) {
     return (
       <h1 className='Header'>
-        Shopping List App
+        {children}
       </h1>
     )
 }
