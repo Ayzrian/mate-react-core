@@ -1,15 +1,20 @@
 import "./ShoppingListItem.scss"
 import classNames from "classnames";
 
-export function ShoppingListItem({ item: { name, quantity = 1, mustHave }}) {
+export function ShoppingListItem({ item: { id, name, quantity = 1, mustHave }, onItemDelete}) {
 
     const itemClass = classNames('ShoppingListItem', {
         'ShoppingListItem_must-have': mustHave
     })
 
+    const handleDeleteClick = () => {
+        onItemDelete(id)
+    }
+
     return (
         <li className={itemClass}>
-            {name} - {quantity}
+            <span>{name} - {quantity}</span>
+            <button onClick={handleDeleteClick}>X</button>
         </li>
     );
 }
