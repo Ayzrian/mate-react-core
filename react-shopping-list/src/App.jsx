@@ -19,7 +19,7 @@ function App() {
   const [sortBy, setSortBy] = useState('');
 
   const handleSubmit = (item) => {
-    setList([...list, { ...item, id: Math.floor(Math.random() * 100000) + 1, quantity: 1 }]);
+    setList((list) => [...list, { ...item, id: Math.floor(Math.random() * 100000) + 1, quantity: 1 }]);
   }
 
   const handleItemDelete = (itemId) => {
